@@ -12,68 +12,86 @@
 	<script type="text/javascript" src="../controllers/app.js"></script>
 </head>
 <body ng-controller="appCtrl">
-	<div class="container">
-		<div class="jumbotron text-center">
-			<h1>Resilience Is ... </h1>
-		</div>
+	<header class="hero flex-column">
+		<h1>Resilience Is So Many Things</h1>
+	</header>
+	<!-- Commitment Pre-text -->
+	<section>
+		<h1 class="col-md-4 text-center">Why I commit</h1>
+		<div class="col-md-8">
+		<p>
+			Enim duis subway tile, esse chia edison bulb occaecat hot chicken deep v
+			eiusmod brooklyn locavore cillum irony tilde. Semiotics keffiyeh esse, hell of
+			vexillologist nihil ethical paleo consectetur consequat flannel listicle
+			prism. Fashion axe offal elit, tofu odio roof party cillum velit bushwick
+			synth glossier salvia fugiat laboris. Vegan magna sed, raclette tattooed
+			bespoke hoodie affogato fap yr portland. Occupy eiusmod try-hard quis nostrud
+			pug. Freegan williamsburg gentrify, echo park cold-pressed activated charcoal
+			pariatur church-key +1 cornhole crucifix narwhal bespoke jean shorts. Sint
+			meditation cray lumbersexual, woke vice brunch bicycle rights 3 wolf moon.
 
-		<!-- MODEL LIST -->
-		<div id="model-list" class="row">
-			<div class="col-sm-4 col-sm-offset-4">
+			Subway tile blog labore gentrify. Cray meh lomo mollit, try-hard placeat
+			retro incididunt pok pok edison bulb exercitation before they sold out.
+			Williamsburg pour-over viral, chicharrones jean shorts iceland PBR&B
+			cillum. Pabst asymmetrical laboris, mollit yr distillery gochujang irure
+			odio. Green juice microdosing pork belly quis, pinterest cardigan pok pok
+			proident mixtape four loko labore locavore cronut YOLO. Vaporware
+			kickstarter unicorn adipisicing, copper mug try-hard excepteur vero
+			mustache four dollar toast squid aliquip ex tousled. Glossier gochujang
+			pickled literally.
 
-				<!-- LOOP OVER THE MODELS IN $scope.pledges -->
-				<div ng-repeat="pledge in pledges" class="model-item">
-					<div class="input-group input-group-lg">
-						<div class="input-group-addon">
-							<div class="glyphicon glyphicon-remove" ng-click="deleteModel(pledge._id)">
-							</div>
-						</div>
-
-						<div type="text" class="form-control"> {{pledge.name}}</div>
-						<div type="text" class="form-control"> {{pledge.title}}</div>
-						<div type="text" class="form-control"> {{pledge.occupation}}</div>
-						<div type="text" class="form-control"> {{pledge.commitment}}</div>
-						<div type="text" class="form-control"> {{pledge.honoree}}</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- FORM TO CREATE MODELS -->
-		<div id="model-form" class="form-horizontal">
-			<div class="col-sm-8 col-sm-offset-2 text-center" id="name-field">
-
-				<!-- Only posts to Angular's createModel if form is valid and was submitted -->
-				<form name="modelCreate" ng-submit="modelCreate.$valid && submitted && createModel()" novalidate>
-					<div class="form-group" ng-class="{'has-error': submitted && modelCreate.name.$invalid}">
-
-						<!-- BIND THIS VALUE TO formData.name -->
-						<!-- BIND THIS VALUE TO pledgeData.name -->
-						<div class="col-sm-12">
-							<!-- <input type="name" name="name"  class="form-control input-lg text-center" placeholder="Model" ng-model="formData.name" required /> -->
-
-							<input type="name" name="name"  class="form-control input-lg text-center" placeholder="Name" ng-model="pledgeData.name" />
-							<input type="text" name="title"  class="form-control input-lg text-center" placeholder="Title" ng-model="pledgeData.title" />
-							<input type="text" name="occupation"  class="form-control input-lg text-center" placeholder="Place Of Work" ng-model="pledgeData.occupation" />
-							<input type="text" name="commitment"  class="form-control input-lg text-center" placeholder="Resilient Is ..." ng-model="pledgeData.commitment" />
-							<input type="text" name="honoree"  class="form-control input-lg text-center" placeholder="Honoree" ng-model="pledgeData.honoree" />
-
-							<div ng-show="submitted && modelCreate.name.$invalid">
-								<p ng-show="modelCreate.name.$error.required">
-									Name is a required field
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Sets the value submitted to true to help with form validation -->
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="submitted=true">
-						Add
-					</button>
-				</form>
-			</div>
-		</div>
+			Aesthetic prism bicycle rights iPhone shoreditch. Ennui snackwave jianbing
+			brunch, shoreditch health goth ullamco asymmetrical. Gluten-free consequat
+			mixtape hoodie waistcoat kogi, seitan offal humblebrag green juice four
+			dollar toast venmo readymade tilde. Dolor readymade man bun flannel magna.
+			Before they sold out snackwave ad, flexitarian viral gastropub +1 mustache
+			everyday carry velit voluptate roof party eu cold-pressed jianbing. Ennui
+			hexagon drinking vinegar fap edison bulb sint proident, poutine mustache
+			green juice. Anim organic ad 3 wolf moon.
+		</p>
 	</div>
+	</section>
+	<!-- Commitment Form-->
+	<section>
+		<form name="modelCreate" ng-submit="modelCreate.$valid && submitted && createModel()" novalidate>
+			<div class="form-group col-md-8 col-md-offset-2" ng-class="{'has-error': submitted && modelCreate.name.$invalid}">
+				<h1 class="text-center">Make your commitment</h1>
+				<!-- BIND THIS VALUE TO pledgeData.name -->
+				<fieldset class="col-md-4">
+					<input type="name" name="name"  class="form-control input-lg text-center" placeholder="Name" ng-model="pledgeData.name" />
+				</fieldset>
+				<fieldset class="col-md-4">
+					<input type="text" name="title"  class="form-control input-lg text-center" placeholder="Title" ng-model="pledgeData.title" />
+				</fieldset>
+				<fieldset class="col-md-4">
+					<input type="text" name="occupation"  class="form-control input-lg text-center" placeholder="Place Of Work" ng-model="pledgeData.occupation" />
+				</fieldset>
+				<fieldset class="col-md-6">
+					Resilient is . . .
+					<input type="text" name="commitment"  class="form-control input-lg text-center" placeholder="Resilient Is ..." ng-model="pledgeData.commitment" />
+				</fieldset>
+				<fieldset class="col-md-12">
+					<input type="text" name="honoree"  class="form-control input-lg text-center" placeholder="Honoree" ng-model="pledgeData.honoree" />
+				</fieldset>
+				<!-- Sets the value submitted to true to help with form validation -->
+				<button type="submit" class="btn btn-primary btn-lg col-md-6 col-md-offset-3" ng-click="submitted=true">
+					Commit
+				</button>
+			</div>
+		</form>
+	</section>
+	<!-- List of our commitments -->
+	<section>
+		<h1 class="text-center">Our Commitments</h1>
+
+		<div ng-repeat="pledge in pledges" class="text-center col-md-8">
+			<span>{{pledge.name}}</span>
+			<span>{{pledge.title}}</span>
+			<span>{{pledge.occupation}}</span>
+			<span>I commit to {{pledge.commitment}}</span>
+			<span>for {{pledge.honoree}}</span>
+		</div>
+	</section>
+
 </body>
 </html>

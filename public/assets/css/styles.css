@@ -1,7 +1,44 @@
-.model-item {
-	padding-bottom: 5px;
+h1 {;}
+h2 {;}
+h3 {;}
+h4 {;}
+h5 {;}
+h6 {;}
+p {
+	font-size: 1.75rem;
+	font-family: helvetica, roboto, sans-serif;
+	line-height: 1.6;
 }
 
-#name-field {
-	margin-top: 80px;
+section {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+section, header {
+	display: flex;
+	display: -moz-flexbox;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	flex-flow: column;
+	-webkit-flex-flow: column;
+}
+
+section:nth-child(even) {background: #CCC}
+section:nth-child(odd) {background: #FFF}
+
+fieldset, button {
+	margin: 1rem auto;
+}
+
+.hero {
+	background-image: url('../../img/hero.jpeg');
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	min-height: 75vh;
+	color: #fff;
 }
