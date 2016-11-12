@@ -1,5 +1,4 @@
 # Resilience.is
-
 ## Set Up
 
 First clone the repo:
