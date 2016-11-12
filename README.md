@@ -1,5 +1,4 @@
-# resilience
-Resilience
+### Resilience.is
 
 ## Set Up
 
@@ -18,7 +17,7 @@ nodemon server.js
 
 The resilience.is page should open at localhost:3000
 
-## Editing
+## Editing the page
 
 To edit the front end, open up the folder in your text editor:
 
