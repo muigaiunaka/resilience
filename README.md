@@ -18,6 +18,8 @@ nodemon server.js
 
 The resilience.is page should open at localhost:3000
 
+## Editing
+
 To edit the front end, open up the folder in your text editor:
 
 **For CSS:** public\assets\css\styles.css
