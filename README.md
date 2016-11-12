@@ -11,8 +11,12 @@ Check that you have node installed by running:
 ```
 npm -v
 ```
+To run the web app and see it locally in the browser, run this command in terminal:
+```
+nodemon server.js
+```
 
-Run nodemon server.js to open the app, it should open at localhost:3000
+The resilience.is page should open at localhost:3000
 
 To edit the front end, open up the folder in your text editor:
 
