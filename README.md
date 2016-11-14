@@ -5,6 +5,10 @@ Regardless of your political affiliation, the week of 11.08.16 was a tough one f
 
 We’ve chosen to react by supporting each other in real, tangible ways. We’ve launched an initiative called Commit Resilience, inviting anyone to share a single action they’ll commit to making, in reaction to these events. We invite you to read the mission statement, and join us in making a single commitment to yourself and your community. Share it on social media, or -- even better -- share it in person. 
 
+**Tech used:** HTML, CSS, MongoDB, Express, Angular JS, Node.js, Heroku
+
+Following the results of the 2016 election...  
+
 ## Set Up
 
 First clone the repo:
@@ -29,5 +33,7 @@ To edit the front end, open up the folder in your text editor:
 **For CSS:** public\assets\css\styles.css
 
 **For Html:** public\views\index.html
+
+
 
 
